@@ -11,16 +11,16 @@
          </form>​​​
                          </center>
 <?php
-    shell_exec("/usr/bin/gpio -g mode 27 out");
+    shell_exec("/usr/bin/gpio -g mode 235 out");
     if(isset($_GET['off']))
         {
                         echo "Irrigation is off";
-                        shell_exec("/usr/bin/gpio -g write 12 0");
+                        shell_exec("/usr/bin/gpio -g write 235 0");
         }
             else if(isset($_GET['on']))
             {
                         echo "Irrigation is on";
-                        shell_exec("/usr/bin/gpio -g write 12 1");
+                        shell_exec("/usr/bin/gpio -g write 235 1");
             }
 ?>
    </body>

@@ -5,9 +5,9 @@ import time
 import ssl
 
 # WATERING_TIME must be in "00:00:00 PM" format
-WATERING_TIME = '11:59:50 AM'
-SECONDS_TO_WATER = 10
-RELAY = Hardware.Relay(12, False)
+WATERING_TIME = '1:00:00 PM'
+SECONDS_TO_WATER = 1800
+RELAY = Hardware.Relay(235, False)
 
 def water_plant(relay, seconds):
     relay.on()

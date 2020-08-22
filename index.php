@@ -25,7 +25,7 @@
             }
             else if(isset($_GET["30mins"]))
             {
-                        echo "30 mins activated"      
+                        echo "30 mins activated";
                         shell_exec('python3 /home/odroid/30min.py');
             }
 ?>

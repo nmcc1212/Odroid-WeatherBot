@@ -22,11 +22,10 @@ def main():
         water_plant(RELAY, SECONDS_TO_WATER)
         time_keeper.set_time_last_watered(TK.TimeKeeper.get_current_time())
         print("\nPlant was last watered at {}".format(time_keeper.time_last_watered))
-        # send_last_watered_email(time_keeper.time_last_watered)
 
-# schedule.every().friday.at("12:00").do(send_check_water_level_email)
+schedule.every().friday.at("12:00").do(water_plant(RELAY, SECONDS_TO_WATER))
 
 while True:
-    # schedule.run_pending()
+    schedule.run_pending()
     time.sleep(1)
     main()

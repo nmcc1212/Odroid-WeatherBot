@@ -1,15 +1,17 @@
+#!/usr/bin/env python3
+from time import sleep
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(235,out)
+GPIO.setup(19,GPIO.OUT)
 
-GPIO.output(235,GPIO.HIGH)
+GPIO.output(19,GPIO.HIGH)
 
 f= open("inuse.txt","w+")
 
 sleep(1800)
 
-GPIO.output(235,GPIO.LOW)
+GPIO.output(19,GPIO.LOW)
 
 f= open("inuse.txt","w+")

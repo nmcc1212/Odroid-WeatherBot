@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(235,out)
+GPIO.setup(19,out)
 
-GPIO.output(235,GPIO.HIGH)
+GPIO.output(19,GPIO.HIGH)
 
 sleep(5)
 
-GPIO.output(235,GPIO.LOW)
+GPIO.output(19,GPIO.LOW)

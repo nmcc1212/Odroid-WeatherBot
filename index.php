@@ -12,6 +12,11 @@
          </form>​​​
                          </center>
 <?php
+   $pythonpath = getenv('PYTHONPATH');
+   $additional = '/usr/bin/python3';
+   if($pythonpath === false){
+   putenv("PYTHONPATH=$additional");
+   }
     shell_exec("/usr/bin/gpio -g mode 235 out");
     if(isset($_GET['off']))
         {
@@ -25,8 +30,9 @@
             }
             else if(isset($_GET["30mins"]))
             {
+                        
+                        shell_exec("/usr/bin/python3 /home/odroid/30min.py");
                         echo "30 mins activated";
-                        shell_exec('python3 /home/odroid/30min.py');
             }
 ?>
    </body>
